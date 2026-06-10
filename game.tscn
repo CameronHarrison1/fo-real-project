@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b2emm18y46rq3"]
+
+[ext_resource type="PackedScene" uid="uid://c8hifpwhqqw03" path="res://scenes/character_body_2d.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://bm7ouc33m2od8" path="res://scripts/character_body_2d.gd" id="2_e2o6t"]
+
+[node name="game" type="Node2D" unique_id=800283366]
+
+[node name="Playa" parent="." unique_id=675767807 instance=ExtResource("1_80nbo")]
+position = Vector2(1.0000001, -1.1920929e-07)
+rotation = -0.0033377397
+script = ExtResource("2_e2o6t")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1346038672]
+position = Vector2(1, -45)
+zoom = Vector2(4, 4)
