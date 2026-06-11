@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b4pwoyu5rf07o"]
 
+[ext_resource type="Script" uid="uid://bypf7fb4cmcre" path="res://scripts/skelly.gd" id="1_safrw"]
 [ext_resource type="Texture2D" uid="uid://djsp6vewkf62r" path="res://assets/Skeletons_Free_Pack/Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Walk.png" id="1_twhyi"]
 [ext_resource type="PackedScene" uid="uid://de47ihhi7fy3t" path="res://scenes/killzone.tscn" id="2_safrw"]
 
@@ -85,6 +86,7 @@ animations = [{
 size = Vector2(12, 42)
 
 [node name="Skelly" type="Node2D" unique_id=1744862073]
+script = ExtResource("1_safrw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=752341759]
 sprite_frames = SubResource("SpriteFrames_b04tg")
@@ -98,5 +100,13 @@ frame_progress = 0.24772212
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone" unique_id=1122353006]
 position = Vector2(-3, 10)
 shape = SubResource("RectangleShape2D_hwtik")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=743294495]
+position = Vector2(-3, 18)
+target_position = Vector2(15, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1956073844]
+position = Vector2(-4, 18)
+target_position = Vector2(-14, 0)
 
 [connection signal="body_entered" from="AnimatedSprite2D/Killzone" to="AnimatedSprite2D/Killzone" method="_on_body_entered"]
