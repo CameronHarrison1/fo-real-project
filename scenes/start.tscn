@@ -2,23 +2,28 @@
 
 [ext_resource type="Script" uid="uid://cv2pfbyn6opug" path="res://scripts/start.gd" id="1_jaeev"]
 
-[node name="Start" type="Node2D" unique_id=141633259]
-script = ExtResource("1_jaeev")
-
-[node name="Control" type="Control" parent="." unique_id=717907598]
+[node name="Menu" type="Control" unique_id=717907598]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 130.0
+offset_top = 86.0
+offset_right = 130.0
+offset_bottom = 86.0
+script = ExtResource("1_jaeev")
 
-[node name="Button" type="Button" parent="Control" unique_id=1506912006]
+[node name="Button" type="Button" parent="." unique_id=1506912006]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.2
-offset_left = 233.0
-offset_top = 74.0
-offset_right = 349.0
-offset_bottom = 134.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 356.0
+offset_top = 183.0
+offset_right = 525.0
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "START"
 
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

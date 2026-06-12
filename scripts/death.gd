@@ -1,7 +1,7 @@
 extends Control
 
 
-func _on_button_pressed():
-	print("button pressed")
+
+
+func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://game.tscn")
-	
